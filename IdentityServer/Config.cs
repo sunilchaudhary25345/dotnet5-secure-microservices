@@ -26,7 +26,7 @@ namespace IdentityServer
                    {
                        ClientId = "movies_mvc_client",
                        ClientName = "Movies MVC Web App",
-                       AllowedGrantTypes = GrantTypes.Code,
+                       AllowedGrantTypes = GrantTypes.Hybrid,
                        RequirePkce = false,
                        AllowRememberConsent = false,
                        RedirectUris = new List<string>()
@@ -45,6 +45,7 @@ namespace IdentityServer
                        {
                            IdentityServerConstants.StandardScopes.OpenId,
                            IdentityServerConstants.StandardScopes.Profile,
+                           "movieAPI"
                        }
                    }
            };
